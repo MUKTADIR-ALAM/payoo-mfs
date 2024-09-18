@@ -9,7 +9,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>HOME</title>
+    <title>payoo home</title>
   </head>
   <body>
     <main class="flex justify-center mt-5">
@@ -30,12 +30,12 @@
             <div class="divider"></div>
             <!-- money management secton -->
             <div>
-              <button class="btn btn-lg">Add Money</button>
-              <button class="btn btn-lg">Cash Out</button>
+              <button id="add-money" class="btn btn-lg">Add Money</button>
+              <button id="cash-out" class="btn btn-lg">Cash Out</button>
             </div>
             <div class="divider"></div>
             <!-- money management input section -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div id="add-money-section" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -67,10 +67,46 @@
                 </div>
               </form>
             </div>
+            <!-- money management cashout section -->
+            <div id="cash-out-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Ammount</span>
+                  </label>
+                  <input
+                    id="add-cash-out-ammount"
+                    type="text"
+                    placeholder="Ammount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="cash-out-pin"
+                    type="password"
+                    autocomplete="off"
+                    placeholder="Your Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                </div>
+              </form>
+            </div>
+
+
+
           </div>
         </div>
       </div>
     </main>
-    <script src="./js/home.js"></script>
+    <script src="./js/payooHome.js"></script>
   </body>
 </html>
